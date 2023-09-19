@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{%static 'bootstrap/css/bootstrap.min.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: left; margin-top: 20px"
+      >
+        <h1 id="logo">OPTI<span id="logo-1">WORK</span></h1>
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: right; margin-top: 20px"
+      >
+        <ul>
+          <li>
+            <a href="#" id="mark">HOME</a>
+          </li>
+          <li>
+            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+          </li>
+
+          <li>
+            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h1
+      style="
+        text-align: center;
+        color: #82a0d8;
+        font-family: 'poppins';
+        margin-top: 40px;
+      "
+    >
+      OUR SERVICES
+    </h1>
+    <div class="row">
+      <div
+        class="col-lg-12"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <div class="slideshow-container">
+          <!-- Slide 1 -->
+          <div class="mySlides">
+            <img
+              src="{%static 'images\s1.jpg'%}"
+              width="800px"
+              id="img-slide"
+              height="500px"
+            />
+            <a href="{%url 'salarystatement'%}"
+              ><div class="text">PAYROLL MANAGEMENT</div></a
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="mySlides">
+            <img
+              src="{%static 'images\s2.jpg'%}"
+              alt="Slide 2"
+              id="img-slide"
+              width="800px"
+              height="500px"
+            />
+            <a href="{%url 'employeefile'%}"
+              ><div class="text">EMPLOYEE PORTAL</div></a
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="mySlides">
+            <img
+              id="img-slide"
+              src="{%static 'images\s3.jpg'%}"
+              alt="Slide 3"
+              width="800px"
+              height="500px"
+            />
+            <a href="{%url 'aboutus'%}"></a>
+            <div class="text">ADVANCED TECHNOLOGY</div>
+          </div>
+
+          <!-- Navigation dots -->
+          <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds (2000 milliseconds)
+      }
+    </script>
+
+    <div class="row">
+      <div class="col-lg-12" style="display: flex; justify-content: center">
+        <div class="glass3">
+          <a href="{%url 'attendance'%}">
+            <button>
+              <img src="{%static 'images/Attendance.png'%}" width="50px" />
+              <h3>Attendance Tracking</h3>
+              <p>At our optiwork/ <span class="span1">Go</span></p>
+            </button></a
+          >
+          <a href="{%url 'salarystatement'%}">
+            <button>
+              <img src="{%static 'images/Payroll1.png'%}" width="50px" />
+              <h3>Payroll Management</h3>
+              <p>At our optiwork/ <span class="span1">Go</span></p>
+            </button></a
+          ><a href="{%url 'employeefile'%}">
+            <button>
+              <img src="{%static 'images/emp.png'%} " width="50px" />
+              <h3>Employee Management</h3>
+              <p>At our optiwork/ <span class="span1">Go</span></p>
+            </button></a
+          >
+          <a href="{%url 'leave'%}">
+            <button>
+              <img src="{%static 'images/Leave.png'%}" width="50px" />
+              <h3>Leave Management</h3>
+              <p>At our optiwork/ <span class="span1">Go</span></p>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <h2
+      style="
+        font-family: 'poppins';
+        margin: 30px;
+        color: black;
+        font-weight: 700;
+      "
+    >
+      FEATURES OF <span style="color: #7c73c0">OPTI </span
+      ><span style="color: #94add7">WORK</span>
+    </h2>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{%static 'images/slide1.jpg'%}"
+            width="100%"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #612d08">
+              Employee Management
+            </h5>
+            <p class="card-text">
+              Our Employee management involves overseeing and optimizing the
+              performance, well-being, and development of a company's workforce
+              to achieve organizational goals.
+            </p>
+            <a href="{%url 'aboutus'%}">
+              <button
+                style="
+                  color: black;
+                  font-family: 'poppins';
+                  background-color: #f0c581;
+                  padding: 5px 15px 5px 15px;
+                  font-size: 15px;
+                  border: 0;
+                  cursor: pointer;
+                  border-radius: 20px;
+                  font-weight: 600;
+                "
+              >
+                Know more
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{%static 'images/slide2.jpg'%}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #612d08">
+              Payroll Management
+            </h5>
+            <p class="card-text">
+              Our payroll management system simplifies salary calculations, tax
+              deductions, and employee payment processing for businesses,
+              ensuring accuracy and compliance
+            </p>
+            <a href="{%url 'aboutus'%}">
+              <button
+                style="
+                  color: black;
+                  font-family: 'poppins';
+                  background-color: #f0c581;
+                  padding: 5px 15px 5px 15px;
+                  cursor: pointer;
+                  font-size: 15px;
+                  border: 0;
+                  border-radius: 20px;
+                  font-weight: 600;
+                "
+              >
+                Know more
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{%static 'images/slide3.jpg'%}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #612d08">
+              Attendance Management
+            </h5>
+            <p class="card-text">
+              Our attendance management system efficiently tracks employee
+              attendance, enhances workforce productivity, and simplifies
+              attendance-related tasks for organizations.
+            </p>
+            <a href="{%url 'aboutus'%}">
+              <button
+                style="
+                  color: black;
+                  font-family: 'poppins';
+                  background-color: #f0c581;
+                  padding: 5px 15px 5px 15px;
+                  cursor: pointer;
+                  font-size: 15px;
+                  border: 0;
+                  border-radius: 20px;
+                  font-weight: 600;
+                "
+              >
+                Know more
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="{%static 'images/slide4.jpg'%}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #612d08">Leave Management</h5>
+            <p class="card-text">
+              Experience seamless leave tracking and approval processes with our
+              user-friendly leave management solution, ensuring better
+              compliance, cost control, and employee satisfaction.
+            </p>
+            <a href="{%url 'aboutus'%}">
+              <button
+                style="
+                  color: black;
+                  font-family: 'poppins';
+                  background-color: #f0c581;
+                  cursor: pointer;
+                  padding: 5px 15px 5px 15px;
+                  font-size: 15px;
+                  border: 0;
+                  border-radius: 20px;
+                  font-weight: 600;
+                "
+              >
+                Know more
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row"
+      style="
+        background-color: black;
+        height: 300px;
+        margin-top: 30px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      "
+    >
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 40px"
+      >
+        <ul
+          style="
+            list-style: none;
+            color: white;
+            text-decoration: none;
+            display: block;
+          "
+        >
+          <li id="list1">
+            <a href="{#}" id="active">Home Page</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'aboutus'%}" id="not_active">About Us</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'employeefile'%}" id="not_active">Employee File</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'salarystatement'%}" id="not_active"
+              >Salary Statement</a
+            >
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'attendance'%}" id="not_active"
+              >Attendance Management</a
+            >
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'leave'%}" id="not_active">Leave Management</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3" style="display: block; margin-top: 40px">
+        <h3 id="customer">OUR TOP COSTUMERS</h3>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/tcs.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/techmah.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+
+          <img
+            src="{%static 'images/wipro.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/oracle.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/infosys.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+        </div>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/zoho.jpg'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+              margin-left: 40px;
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/cat.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/exide.jfif'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+          <img
+            src="{%static 'images/hcl.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+        </div>
+      </div>
+
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 20px"
+      >
+        <div style="display: block">
+          <h4 id="address">ADDRESS</h4>
+          <h5 id="address-info">
+            76/B1,1st Floor, ByPass Road, Near Central Bus Stand, DBS Bank
+            Upstairs, Hosur-635109
+          </h5>
+        </div>
+      </div>
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: right; margin-top: 40px"
+      >
+        <div style="display: block">
+          <div style="display: flex">
+            <div>
+              <a
+                href="https://twitter.com/OPTIWORK12?t=8556idUN12JgfKG4qhs8aQ&s=09"
+              >
+                <img
+                  src="{% static 'images/Twitter.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551135004187&mibextid=b06tZ0"
+              >
+                <img
+                  src="{% static 'images/Facebook.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://api.whatsapp.com/send?phone=916379120712">
+                <img
+                  src="{% static 'images/Whatsapp.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/opti.work/">
+                <img
+                  src="{% static 'images/Instagram.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/optiwork-management-3b2798291"
+              >
+                <img
+                  src="{% static 'images/LinkedIn.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://youtube.com/@OPTIWORK?si=g04uEOgvPG-U8K_t">
+                <img
+                  src="{% static 'images/Youtube.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7783.495816685353!2d77.8204424411616!3d12.729861900254779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae714564d6b14f%3A0xfbaaed26168fea5d!2sPUMO%20TECHNOVATION%20%26%20CADD%20LEADER!5e0!3m2!1sen!2sin!4v1694683632077!5m2!1sen!2sin"
+            width="350px"
+            height="150px"
+            style="border: 0; margin-top: 30px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

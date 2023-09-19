@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{%static 'bootstrap/css/bootstrap.min.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'css/leavesearch.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: left; margin-top: 20px"
+      >
+        <h1 id="logo">OPTI<span id="logo-1">WORK</span></h1>
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: right; margin-top: 20px"
+      >
+        <ul>
+          <li>
+            <a href="{%url 'home'%}" id="nav">HOME</a>
+          </li>
+          <li>
+            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+          </li>
+
+          <li>
+            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" style="display: flex; justify-content: left">
+        <a href="{%url 'attendance'%}"
+          ><button id="back">
+            <img src="{%static 'images\Back.png'%}" alt="" width="30px" />BACK
+          </button></a
+        >
+      </div>
+    </div>
+
+    <h1 id="leave-title">ATTENDANCE <span id="leave-span"> RECORD</span></h1>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="glass2">
+          <table style="width: 100%">
+            <tr>
+              <th>EMPLOYEE CODE</th>
+              <th>EMPLOYEE NAME</th>
+              <th>DATE</th>
+              <th>STATUS</th>
+            </tr>
+            {%for i in employee%}
+            <tr>
+              <th
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <div class="glass2">{{i.Employee_Code}}</div>
+              </th>
+              <th>
+                <div class="glass2">{{i.Employee_Name}}</div>
+              </th>
+              <th>
+                <div class="glass2">{{i.Date}}</div>
+              </th>
+              <th>
+                <div class="glass2">{{i.status}}</div>
+              </th>
+            </tr>
+            {%endfor%}
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+      style="
+        background-color: black;
+        height: 300px;
+        margin-top: 30px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      "
+    >
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 40px"
+      >
+        <ul
+          style="
+            list-style: none;
+            color: white;
+            text-decoration: none;
+            display: block;
+          "
+        >
+          <li id="list1">
+            <a href="{%url 'home'%}" id="not_active">Home Page</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'aboutus'%}" id="not_active">About Us</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'employeefile'%}" id="not_active">Employee File</a>
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'salarystatement'%}" id="not_active"
+              >Salary Statement</a
+            >
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'attendance'%}" id="not_active"
+              >Attendance Management</a
+            >
+          </li>
+          <li style="list-style: none">
+            <a href="{%url 'leave'%}" id="not_active">Leave Management</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3" style="display: block; margin-top: 40px">
+        <h3 id="customer">OUR TOP COSTUMERS</h3>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/tcs.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/techmah.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+
+          <img
+            src="{%static 'images/wipro.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/oracle.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/infosys.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+        </div>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/zoho.jpg'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+              margin-left: 40px;
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/cat.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/exide.jfif'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+          <img
+            src="{%static 'images/hcl.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+        </div>
+      </div>
+
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 20px"
+      >
+        <div style="display: block">
+          <h4 id="address">ADDRESS</h4>
+          <h5 id="address-info">
+            76/B1,1st Floor, ByPass Road, Near Central Bus Stand, DBS Bank
+            Upstairs, Hosur-635109
+          </h5>
+        </div>
+      </div>
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: right; margin-top: 40px"
+      >
+        <div style="display: block">
+          <div style="display: flex">
+            <div>
+              <a
+                href="https://twitter.com/OPTIWORK12?t=8556idUN12JgfKG4qhs8aQ&s=09"
+              >
+                <img
+                  src="{% static 'images/Twitter.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551135004187&mibextid=b06tZ0"
+              >
+                <img
+                  src="{% static 'images/Facebook.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://api.whatsapp.com/send?phone=916379120712">
+                <img
+                  src="{% static 'images/Whatsapp.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/opti.work/">
+                <img
+                  src="{% static 'images/Instagram.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/optiwork-management-3b2798291"
+              >
+                <img
+                  src="{% static 'images/LinkedIn.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+            <div>
+              <a href="https://youtube.com/@OPTIWORK?si=g04uEOgvPG-U8K_t">
+                <img
+                  src="{% static 'images/Youtube.png'%}"
+                  alt=""
+                  width="40px"
+                  height="40px"
+                  style="margin-right: 20px; cursor: pointer"
+              /></a>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7783.495816685353!2d77.8204424411616!3d12.729861900254779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae714564d6b14f%3A0xfbaaed26168fea5d!2sPUMO%20TECHNOVATION%20%26%20CADD%20LEADER!5e0!3m2!1sen!2sin!4v1694683632077!5m2!1sen!2sin"
+            width="350px"
+            height="150px"
+            style="border: 0; margin-top: 30px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

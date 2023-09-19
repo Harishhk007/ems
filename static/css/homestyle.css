@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque&family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200;300;400;500;600;700;800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;1,500;1,700&family=Teko:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+ul{
+    display: flex;
+    text-decoration: none;
+}
+li{
+    margin-right: 30px;
+    text-decoration: none;
+    list-style: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+#logo{
+    color: #7C73C0;
+    font-family: 'poppins';
+    font-weight: 800;
+    cursor: pointer;
+}
+#logo-1{
+    color:#94ADD7;
+}
+#nav{
+    font-family: 'kanit';
+    color:  white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#nav:hover,#mark{
+    color:  red;
+    text-decoration: none;
+    font-family: 'kanit';
+
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+}
+body {
+    padding: 0;
+    margin: 0;
+    
+ background-image: url("https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+#loginnav{
+    font-family: 'kanit';
+    color:  white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+}
+#loginnav:hover{
+    color: red;
+}
+#sub-btn{
+    display: flex;
+                    justify-content: center;
+                    font-family: 'poppins';
+                    background-color: white;
+                    font-size: 20px;
+                    margin-top: 40px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    color: red;
+                    padding: 5px 15px 5px 15px;
+                    border: 0;
+                    
+                    border-radius: 20px;
+}
+#sub-btn:hover{
+    color: white;
+    background-color: red;
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+.slideshow-container {
+    
+    position: relative;
+   
+  }
+
+  /* Style for slideshow images */
+  .mySlides {
+    display: none;
+    width: 100%;
+  }
+
+  /* Style for text in slides */
+  .text {
+    color: white;
+    background-color: #7C73C0;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    font-family: 'poppins';
+    bottom: 0;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  /* Style for slideshow navigation dots */
+  .dot {
+    height: 0px;
+    width: 0px;
+    margin: 0 2px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+  
+.downmenu{
+    background-color: lightgray;
+    margin-top: 50px;
+
+    padding: 10px;
+    width:1050px;
+    
+    border-radius: 20px;
+
+}
+.glass3 button{
+    border:0;
+cursor: pointer;
+    width:400px;
+    border-radius: 20px;
+    margin: 40px 70px 40px 40px;
+   
+}
+.glass3 button h3{
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: 500;
+}
+.glass3 button p{
+    font-family: 'poppins';
+    line-height: 40px;
+    font-size: 15px;
+}
+
+.col-lg-3{
+  display: flex;
+  justify-content: center;
+}
+.span1{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.span2{
+    background-color: white;
+    color: black;
+    
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.card-body #btn1{
+    background-color: #612D08;
+    color: white;
+}
+
+#active{
+    font-family: 'poppins';
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+}
+#not_active{
+    font-family: 'poppins';
+    color: grey;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+#not_active:hover{
+    color: white;
+}
+#customer{
+    font-family: 'poppins';
+    color: white;
+    text-decoration: underline;
+}
+#address{
+    font-family: 'poppins';
+    color: white;
+    margin-top: 20px;
+}
+#address-info{
+    font-family: 'poppins';
+    color:gray;
+    width:270px
+}
+a:hover{
+    text-decoration: none;
+}
+
+.glass3 button:hover{
+    background-color:#add8e6;
+    color: white;
+    box-shadow: 10px 10px 10px black;
+}
+#active{
+    font-family: 'poppins';
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+}
+#not_active{
+    font-family: 'poppins';
+    color: grey;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+#not_active:hover{
+    color: white;
+}
+#customer{
+    font-family: 'poppins';
+    color: white;
+    text-decoration: underline;
+}
+#address{
+    font-family: 'poppins';
+    color: white;
+    margin-top: 20px;
+}
+#address-info{
+    font-family: 'poppins';
+    color:gray;
+  font-weight: 400;
+    width:270px;
+}
+a:hover{
+    text-decoration: none;
+}
+#log-text{
+    font-family: 'poppins';
+    font-weight: 800;
+    color: #7C73C0;
+
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#in-text{
+    color: #94ADD7;
+}
+#loginbody{
+    background-image: url("https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    width:500px;
+    margin-left: 500px;
+    margin-top: 70px;
+   
+    border:1px solid rgba(255,255,255,0.18);
+   -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0, 0,0.37);
+    padding: 20px;
+}
+#img-slide{
+    margin-bottom: 30px;
+}
+.glass3{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    width:1050px;
+    margin-top: 50px;
+
+    padding: 10px;
+    border:1px solid rgba(255,255,255,0.18);
+   -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0, 0,0.37);
+ 
+}
+#aboutus-title{
+    font-family: 'poppins';
+    color: #7C73C0;
+    text-align: left;
+    margin-top: 30px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+#aboutus-desc{
+    font-family: 'poppins';
+    color: gainsboro;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 15px;
+}
+#desc-below{
+    font-family: 'poppins';
+    color:black;
+    font-weight: 500;
+
+}
+
+.detel{
+  display: flex;
+  justify-content: center;
+}
+.detel h1{
+    font-size: 50px;
+    color: red;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+  
+}
+
+.title {
+    font-family: "Cairo";
+    text-align: left;
+    color: #FFF;
+
+  }
+  
+  #aboutus-title{
+    background-image: url(https://media.giphy.com/media/elzCnIQAjQMWA/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+
+  }
+
+span{
+    position: relative;
+    color:#C70039;
+
+}
+span::before{
+    content: attr(data-text);
+    position: absolute;
+    color:#FFA1F5;
+    width:200px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #FFA1F5;
+    filter: drop-shadow(0 0 20px #fff) ;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width:0;
+    }
+    70%,90%
+    {
+        width:100%;
+    }
+}
+#man-services{
+    font-family: 'poppins';
+    color: #7C73C0;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+#man-get-btn:hover{
+    color: white;
+    background-color: #000;
+}
+#man-get-btn{
+    padding: 5px 15px 5px 15px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #94ADD7;
+    color: #000;
+    margin-left: 20px;
+    font-family: 'poppins';
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+    #man-main-btn:hover{
+        background-color: #FFEEF4;
+    }
+
+#man-main-btn{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    outline: 2px solid black;
+    margin-bottom: 30px;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+#man-heading{
+    font-family: 'poppins';
+    color:#7C73C0;
+    margin-left: 20px;
+    text-align: left;
+}
+#main-desc{
+    font-family: 'poppins';
+    color: #3F0071;
+    text-align: left;
+    margin-left: 20px;
+}
+.glass1{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+
+width: 300px;
+    margin-top: 70px;
+   cursor: pointer;
+    border:1px solid rgba(255,255,255,0.18);
+   -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0, 0,0.37);
+    padding: 20px;
+}
+#address-head{
+    font-family: 'poppins';
+    color: white;
+    text-align: center;
+
+    text-decoration: underline;
+  
+}
+#con-img a img:hover{
+transform: scale(1.2);
+}
+.glass1:hover{
+    transform: scale(1.05);
+
+}

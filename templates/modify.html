@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{%static 'bootstrap/css/bootstrap.min.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'css/mod.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: left; margin-top: 20px"
+      >
+        <h1 id="logo">OPTI<span id="logo-1">WORK</span></h1>
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: right; margin-top: 20px"
+      >
+        <ul>
+          <li>
+            <a href="{%url 'home'%}" id="nav">HOME</a>
+          </li>
+          <li>
+            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+          </li>
+          
+          <li>
+            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" style="display: flex; justify-content: left">
+        <a href="{%url 'employeefile'%}"
+          ><button id="back">
+            <img src="{%static 'images\Back.png'%}" alt="" width="30px" />BACK
+          </button></a
+        >
+      </div>
+    </div>
+
+    <h1 id="att-title">MODIFY <span id="att-span">DATA</span></h1>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+ 
+    
+    
+    </div>
+
+    <div class="alert alert-danger" role="alert" style="font-family: 'poppins';margin-top: 50px;text-align: center;">
+      Employee's Code and Employee's Name Can't Be Changed!
+    </div>
+<div class="glass2">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div style="display: flex;justify-content: center;">
+      <div class="glass2" style="width: 100px;">
+      <button type="submit" style="font-family: 'poppins';color: white;background-color: transparent;border: 0;">Save</button></div></div>
+  </form>
+</div>
+  
+      
+        </body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{%static 'bootstrap/css/bootstrap.min.css'%}"
+    />
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: left; margin-top: 20px"
+      >
+        <h1 id="logo">OPTI<span id="logo-1">WORK</span></h1>
+      </div>
+      <div
+        class="col-lg-6"
+        style="display: flex; justify-content: right; margin-top: 20px"
+      >
+        <ul>
+          <li>
+            <a href="{%url 'home'%}">HOME</a>
+          </li>
+          <li>
+            <a href="{%url 'aboutus'%}">ABOUT US</a>
+          </li>
+          <li>
+            <a href="" id="mark">MANAGEMENT</a>
+          </li>
+          <li>
+            <a href="">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h1 id="man-services">OUR SERVICES</h1>
+    <a href="{%url 'employeefile'%}" id="man-main-btn">
+      <img
+        src="{% static 'images/man1_ems.jpg'%}"
+        alt=""
+        style="border: 0; border-radius: 20px"
+        width="300px"
+        height="200px"
+      />
+      <div style="display: block">
+        <h2 id="man-heading">EMPLOYEE MANAGEMENT SYSTEM</h2>
+        <p id="main-desc">
+          Our Employee management involves overseeing and optimizing the
+          performance, well-being, and development of a company's workforce to
+          achieve organizational goals.
+        </p>
+        <button id="man-get-btn">GET INTO</button>
+      </div>
+    </a>
+
+    <a href="" id="man-main-btn">
+      <img
+        src="{% static 'images/man2_lms.jpg'%}"
+        alt=""
+        style="border: 0; border-radius: 20px"
+        width="300px"
+        height="200px"
+      />
+      <div style="display: block">
+        <h2 id="man-heading">LEAVE MANAGEMENT SYSTEM</h2>
+        <p id="main-desc">
+          Experience seamless leave tracking and approval processes with our
+          user-friendly leave management solution, ensuring better compliance,
+          cost control, and employee satisfaction.
+        </p>
+        <button id="man-get-btn">GET INTO</button>
+      </div>
+    </a>
+
+    <a href="{%url 'salarystatement'%}" id="man-main-btn">
+      <img
+        src="{% static 'images/man3_payroll.jpg'%}"
+        alt=""
+        style="border: 0; border-radius: 20px"
+        width="300px"
+        height="200px"
+      />
+      <div style="display: block">
+        <h2 id="man-heading">PAYROLL MANAGEMENT SYSTEM</h2>
+        <p id="main-desc">
+          Our payroll management system simplifies salary calculations, tax
+          deductions, and employee payment processing for businesses, ensuring
+          accuracy and compliance
+        </p>
+        <button id="man-get-btn">GET INTO</button>
+      </div>
+    </a>
+
+    <a href="" id="man-main-btn">
+      <img
+        src="{% static 'images/man4_att.jpg'%}"
+        alt=""
+        style="border: 0; border-radius: 20px"
+        width="300px"
+        height="200px"
+      />
+      <div style="display: block">
+        <h2 id="man-heading">ATTENDANCE MANAGEMENT SYSTEM</h2>
+        <p id="main-desc">
+          Our attendance management system efficiently tracks employee
+          attendance, enhances workforce productivity, and simplifies
+          attendance-related tasks for organizations.
+        </p>
+        <button id="man-get-btn">GET INTO</button>
+      </div>
+    </a>
+
+    <div
+      class="row"
+      style="
+        background-color: black;
+        height: 300px;
+        margin-top: 30px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      "
+    >
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 40px"
+      >
+        <ul
+          style="
+            list-style: none;
+            color: white;
+            text-decoration: none;
+            display: block;
+          "
+        >
+          <li id="list1">
+            <a href="#" id="not_active">Home Page</a>
+          </li>
+          <li style="list-style: none">
+            <a href="#" id="not_active">About Us</a>
+          </li>
+          <li style="list-style: none">
+            <a href="#" id="not_active">Employee File</a>
+          </li>
+          <li style="list-style: none">
+            <a href="#" id="not_active">Salary Statement</a>
+          </li>
+          <li style="list-style: none">
+            <a href="#" id="not_active">Attendance Management</a>
+          </li>
+          <li style="list-style: none">
+            <a id="not_active">Leave Management</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3" style="display: block; margin-top: 40px">
+        <h3 id="customer">OUR TOP COSTUMERS</h3>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/tcs.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/techmah.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+
+          <img
+            src="{%static 'images/wipro.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/oracle.jfif'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+          <img
+            src="{%static 'images/infosys.jpg'%}"
+            alt=""
+            width="60px"
+            style="border-radius: 50%; margin-top: 20px; margin-right: 20px"
+          />
+        </div>
+        <div style="display: flex">
+          <img
+            src="{%static 'images/zoho.jpg'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+              margin-left: 40px;
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/cat.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+
+          <img
+            src="{%static 'images/exide.jfif'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+          <img
+            src="{%static 'images/hcl.png'%}"
+            alt=""
+            width="60px"
+            style="
+              border-radius: 50%;
+              margin-top: 20px;
+
+              margin-right: 20px;
+            "
+          />
+        </div>
+      </div>
+
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: center; margin-top: 20px"
+      >
+        <div style="display: block">
+          <h4 id="address">ADDRESS</h4>
+          <h5 id="address-info">
+            76/B1,1st Floor, ByPass Road, Near Central Bus Stand, DBS Bank
+            Upstairs, Hosur-635109
+          </h5>
+        </div>
+      </div>
+      <div
+        class="col-lg-3"
+        style="display: flex; justify-content: right; margin-top: 40px"
+      >
+        <div style="display: block">
+          <div style="display: flex">
+            <div>
+              <img
+                src="{% static 'images/Twitter.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+            <div>
+              <img
+                src="{% static 'images/Facebook.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+            <div>
+              <img
+                src="{% static 'images/Whatsapp.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+            <div>
+              <img
+                src="{% static 'images/Instagram.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+            <div>
+              <img
+                src="{% static 'images/LinkedIn.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+            <div>
+              <img
+                src="{% static 'images/Youtube.png'%}"
+                alt=""
+                width="40px"
+                height="40px"
+                style="margin-right: 20px; cursor: pointer"
+              />
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7783.495816685353!2d77.8204424411616!3d12.729861900254779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae714564d6b14f%3A0xfbaaed26168fea5d!2sPUMO%20TECHNOVATION%20%26%20CADD%20LEADER!5e0!3m2!1sen!2sin!4v1694683632077!5m2!1sen!2sin"
+            width="350px"
+            height="150px"
+            style="border: 0; margin-top: 30px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
