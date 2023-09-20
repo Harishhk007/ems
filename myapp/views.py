@@ -55,20 +55,22 @@ def attsearch(request):
 def leavesearch(request):
      if request.method=="POST":
           lsearch=request.POST['lsearch']
-          employee=leave.objects.filter(Employee_Name=lsearch)
+          employee=Employees.objects.filter(Employee_Code=lsearch).first()
+          ename=employee.Employee_Name
+          employee=leave.objects.filter(Employee_Code=lsearch)
 
-     return render(request,"leavesearch.html",{'employee':employee})
+     return render(request,"leavesearch.html",{'employee':employee,'ename':ename})
 
 
 ############################################               LEAVE                         ####################################################
 def leavepage(request):
      if request.method=="POST":
-          lname=request.POST['lename']
+          lcode=request.POST['lecode']
           lsdate=request.POST['leavesdate']
           ledate=request.POST['leaveedate']
           ltype=request.POST['ltype']
           lreason=request.POST['reason']
-          obj=leave(Employee_Name=lname,Start_Date=lsdate,End_Date=ledate,Leave_Type=ltype,Reason=lreason)
+          obj=leave(Employee_Code=lcode,Start_Date=lsdate,End_Date=ledate,Leave_Type=ltype,Reason=lreason)
           obj.save()
      return render(request,"leavepage.html")
 

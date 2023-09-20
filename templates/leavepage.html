@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap Example</title>
+    <title>Optiwork - Leave Management</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% load static %}
@@ -48,7 +48,7 @@
     ></div>
     <div class="col-lg-6" style="display: flex;justify-content:right;">
       <form action="{%url 'leavesearch'%}" method="POST" style="display: flex;"> {% csrf_token %}
-    <div class="glass3" style="margin-right: 30px;"><input type="text" name="lsearch" placeholder="Search" id="lsearch"><img src="{%static 'images\Search.png'%}" alt="" style="float: right;margin-left: 10px;" width="30px">
+    <div class="glass3" style="margin-right: 30px;"><input type="number" name="lsearch" placeholder="Search" id="lsearch"><img src="{%static 'images\Search.png'%}" alt="" style="float: right;margin-left: 10px;" width="30px">
     </div><div class="glass3" style="width: 110px;"><input type="submit" style="cursor: pointer;"></div></form></div></div>
 
     <h1 id="leave-title">LEAVE <span id="leave-span"> MANAGEMENT</span></h1>
@@ -60,14 +60,14 @@
             <form action="" method="POST">
               {%csrf_token%}
           <tr>
-            <th>EMPLOYEE NAME <span id="req">*</span></th>
+            <th>EMPLOYEE CODE <span id="req">*</span></th>
 
             <th>
               <div class="glass2">
                 <input
-                  type="text"
-                  name="lename"
-                  id="lename"
+                  type="number"
+                  name="lecode"
+                  id="lecode"
                   placeholder="Enter Name"
                   style="text-align: center"
                 />

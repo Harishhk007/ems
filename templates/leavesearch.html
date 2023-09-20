@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bootstrap Example</title>
+    <title>Optiwork - Leave record</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% load static %}
@@ -56,6 +56,7 @@
         <div class="glass2">
           <table style="width: 100%">
             <tr>
+              <th style="font-size: 20px">EMPLOYEE CODE</th>
               <th style="font-size: 20px">EMPLOYEE NAME</th>
               <th style="font-size: 20px">START DATE</th>
               <th style="font-size: 20px">END DATE</th>
@@ -65,7 +66,10 @@
             {%for i in employee%}
             <tr>
               <th style="font-size: 20px">
-                <div class="glass2">{{i.Employee_Name}}</div>
+                <div class="glass2">{{i.Employee_Code}}</div>
+              </th>
+              <th style="font-size: 20px">
+                <div class="glass2">{{ename}}</div>
               </th>
               <th style="font-size: 20px">
                 <div class="glass2">{{i.Start_Date}}</div>

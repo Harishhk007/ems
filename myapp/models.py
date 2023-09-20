@@ -35,7 +35,7 @@ class admins(models.Model):
         return self.username
 
 class  leave(models.Model):
-    Employee_Name=models.CharField(max_length=100,null=False,blank=False)
+    Employee_Code=models.IntegerField(max_length=100,null=False,blank=False)
     Start_Date=models.DateField(null=False,blank=False)
     End_Date=models.DateField(null=False,blank=False)
     Leave_Type=models.CharField(max_length=100,null=False,blank=False)

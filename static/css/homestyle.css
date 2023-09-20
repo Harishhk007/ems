@@ -364,7 +364,7 @@ a:hover{
   }
   
   #aboutus-title{
-    background-image: url(https://media.giphy.com/media/elzCnIQAjQMWA/giphy.gif);
+    background-image: url(https://media1.giphy.com/media/U8lTznWkiDY2NlX65L/giphy.gif);
     background-size: cover;
     color: transparent;
     -moz-background-clip: text;
@@ -378,18 +378,19 @@ a:hover{
 
 span{
     position: relative;
-    color:#C70039;
+    color:#F5F5DC;
 
 }
 span::before{
     content: attr(data-text);
     position: absolute;
-    color:#FFA1F5;
+    color:#FFB000;
     width:200px;
     overflow: hidden;
+
     white-space: nowrap;
-    border-right: 4px solid #FFA1F5;
-    filter: drop-shadow(0 0 20px #fff) ;
+    border-right: 4px solid #FFB000;
+    filter: drop-shadow(0 0 20px #FFB000) ;
     animation: animate 8s linear infinite;
 }
 @keyframes animate{
