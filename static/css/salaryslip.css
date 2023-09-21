@@ -16,10 +16,6 @@
     margin: 0;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-}
 
 .row {
     padding: 0;
@@ -147,6 +143,13 @@ padding:5px 10px 5px 10px;
 }
 #back:hover{
     background-color: #94ADD7;
+}
+select{
+   
+}
+option{
+    background-color: transparent;
+    color: #000;
 }
 
 .subbtn:hover{

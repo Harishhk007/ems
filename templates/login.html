@@ -50,15 +50,15 @@
         >
           
             <h1 id="log-text">LOG<span id="in-text">IN</span></h1>
-            <h2 style="text-align: center; font-family: 'Bebas Neue';color: white;font-weight: 400;">
-              Admin Username
+            <h2 style="text-align: center; font-family: 'poppins';color: white;font-weight: 800;font-size: 30px;">
+              Enter Username
             </h2>
             <form action="" method="POST">
               {% csrf_token %}
               <input
                 type="text"
-                name="admin_name"
-                id="admin_name"
+                name="username"
+                id="username"
                 required
                 style="
                   font-family: 'poppins';
@@ -74,13 +74,13 @@
                 "
                 placeholder="Username"
               />
-              <h2 style="text-align: center; font-family: 'Bebas Neue';color: white;font-weight: 400;">
-                Admin Password
+              <h2 style="text-align: center; font-family: 'poppins';color: white;font-weight: 800;font-size: 30px;">
+                Enter Password
               </h2>
               <input
                 type="text"
-                name="admin_pass"
-                id="admin_pass"
+                name="userpass"
+                id="userpass"
                 required
                 placeholder="Password"
                 style="

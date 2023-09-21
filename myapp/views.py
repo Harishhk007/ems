@@ -13,6 +13,10 @@ from .models import admins
 from .models import attendance
 from .forms import EmployeeForm
 
+###########################################################################################################################################
+#                                                             ADMIN                              
+###########################################################################################################################################
+
 
 ###############################################             SEARCH                          ###############################################
 
@@ -124,16 +128,19 @@ def new_employee(request):
 
 def login(request):
     if request.method == 'POST':
-        user = request.POST.get('admin_name')
-        password = request.POST.get('admin_pass')
-        sel = request.POST.get('select_file')
+        user = request.POST.get('username')
+        password = request.POST.get('userpass')
+        request.session['password'] = password
 
         # Check if a user with the provided username and password exists
         user_exists = admins.objects.filter(username=user, password=password).exists()
 
-        if user_exists :
+        if user_exists=="pumo" :
             url = reverse('home')
             return HttpResponseRedirect(url)
+        if user_exists:
+             url = reverse('ehome')
+             return HttpResponseRedirect(url)
         else:
              return render(request,"login.html")
         
@@ -249,3 +256,128 @@ def manage(request):
 ##############################################       CONTACT             ##################################################################
 def contact(request):
      return render(request,"contact.html")
+
+
+##########################################################################################################################################
+#                                                     EMPLOYEE PORTAL                                                                      
+###########################################################################################################################################
+
+
+def employeehome(request):
+     return render(request,"employee_home.html")
+
+
+def employeeattendance(request):
+
+            password = request.session.get('password')
+            datetoday=datetime.now().date
+            employee = Employees.objects.filter(Employee_Code=password)
+            if request.method=="POST":
+                attcode = request.POST.get('att_code')
+                attname = request.POST.get('att_name')
+                attdate = request.POST.get('att_date')
+                attstatus = request.POST.get('att_status')
+            
+                a = attendance(Employee_Code=attcode, Employee_Name=attname, Date=attdate, status=attstatus)
+                a.save()
+            return render(request, "employee_attendance.html", {'employees': employee,'datetoday':datetoday})
+    
+
+
+def eattsearch(request):
+     if request.method=="POST":
+          code=request.POST['asearch']
+          employees=attendance.objects.filter(Employee_Code=code)
+     return render(request,"employee_attsearch.html",{'employee':employees})
+
+def epayroll(request):
+    password = request.session.get('password')
+    employees = Salary_slip.objects.filter(Employee_Code=password)
+    salary_list = []
+
+    for employee in employees:
+        month = employee.month
+        year = employee.year
+        Employee_Code = employee.Employee_Code
+        Employee_Name = employee.Employee_Name
+        Employee_Bsalary = employee.Employee_Bsalary
+        No_Of_Days_Worked = employee.No_Of_Days_Worked
+        Salary_of_Month = employee.Salary_of_Month
+        Da = employee.Da
+        Hra = employee.Hra
+        Conveyance = employee.Conveyance
+        Gross = employee.Gross
+        Deduction = employee.Deduction
+        Net = employee.Net
+
+        employee_data = {
+            'month': month,
+            'year': year,
+            'Employee_Code': Employee_Code,
+            'Employee_Name': Employee_Name,
+            'basic': Employee_Bsalary,
+            'deduction': Deduction,
+            'da': Da,
+            'hra': Hra,
+            'con': Conveyance,
+            'grosspay': Gross,
+            'net': Net,
+        }
+
+        salary_list.append(employee_data)
+
+    return render(request, "employee_salarystatement.html", {'salary': salary_list})
+def salsearch(request):
+    password = request.session.get('password')
+    
+    if request.method == "POST":
+        search_query = request.POST.get('salsearch')  # Use a different variable name
+
+        # Use .filter() to get a list of matching objects
+        employees = Salary_slip.objects.filter(Employee_Code=password, month=search_query)
+
+        salary_list = []
+
+        for employee in employees:
+            month = employee.month
+            year = employee.year
+            Employee_Code = employee.Employee_Code
+            Employee_Name = employee.Employee_Name
+            Employee_Bsalary = employee.Employee_Bsalary
+            No_Of_Days_Worked = employee.No_Of_Days_Worked
+            Salary_of_Month = employee.Salary_of_Month
+            Da = employee.Da
+            Hra = employee.Hra
+            Conveyance = employee.Conveyance
+            Gross = employee.Gross
+            Deduction = employee.Deduction
+            Net = employee.Net
+
+            employee_data = {
+                'month': month,
+                'year': year,
+                'Employee_Code': Employee_Code,
+                'Employee_Name': Employee_Name,
+                'basic': Employee_Bsalary,
+                'deduction': Deduction,
+                'da': Da,
+                'hra': Hra,
+                'con': Conveyance,
+                'grosspay': Gross,
+                'net': Net,
+            }
+
+            salary_list.append(employee_data)
+
+        return render(request,"employee_salarysearch.html", {'salary': salary_list})
+    
+    return render(request,"employee_salarysearch.html", {'salary': []})  # Handle non-POST requests
+def employeemanage(request):
+    password = request.session.get('password')
+     
+    search_details = Employees.objects.filter(Employee_Code=password)
+
+      
+        
+    return render(request, "employee_manage.html", {'search_data': search_details})
+    
