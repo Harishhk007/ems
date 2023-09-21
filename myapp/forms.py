@@ -1,6 +1,21 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Employees
+from .models import admins
+
+class Loginform(ModelForm):
+    class Meta:
+        model=admins
+        fields=('username','password')
+        labels={'username':'Username',
+                'password':'Password'
+                }
+        widgets={
+            'username': forms.TextInput(attrs={'class':'form-control','style':'width:500px;background-color:transparent;color:white;font-family:"poppins";font-size:25px;text-align:center','placeholder':'Enter Username'}),
+            'password': forms.TextInput(attrs={'class':'form-control','style':'width:500px;background-color:transparent;color:white;font-family:"poppins";font-size:25px;text-align:center','placeholder':'Enter Password'}),
+        }
+            
+
 
 class EmployeeForm(ModelForm):
     class Meta:
@@ -12,6 +27,7 @@ class EmployeeForm(ModelForm):
                 'Employee_Role':'Employee Role',
                 'Employee_Doj':'Date of Joining',
                 'Employee_Bsalary':'Employee Basic Salary',
+                
                 'Employee_Fname':'Employee Father\'s \ Husband\'s Name ',
                 'Employee_Dob':'Employee Date of Birth',
                 'Employee_Fphone':'Employee Care of Phone Number',

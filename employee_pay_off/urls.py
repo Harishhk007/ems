@@ -31,5 +31,10 @@ urlpatterns = [
     path('Attendancerecord/',views.eattsearch,name="eattsearch"),
     path('Salarystatements/',views.epayroll,name="SalaryStatements"),
     path('salarysearch/',views.salsearch,name="salsearch"),
-    path('employeeinfo/',views.employeemanage,name="employeemanage")
+    path('employeeinfo/',views.employeemanage,name="employeemanage"),
+    path('employeeleave/',views.employeeleave,name="eleave"),
+    path('employeeleaverecords/',views.employeeleavesearch,name="eleavesearch"),
+    path('Aboutus/',views.employeeaboutus,name="employee_aboutus"),
+    path('Contact/',views.employeecontact,name="employee_contact"),
+    path('Changepass/<int:employee_code>/',views.changepass,name="changepass")
 ]

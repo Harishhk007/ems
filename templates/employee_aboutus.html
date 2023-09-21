@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Optiwork - Employee Record</title>
+    <title>Optiwork - aboutus</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% load static %}
@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="{%static 'bootstrap/css/bootstrap.min.css'%}"
     />
-    <link rel="stylesheet" href="{% static 'css/showsearch.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -28,68 +28,122 @@
       >
         <ul>
           <li>
-            <a href="{%url 'home'%}" id="nav">HOME</a>
+            <a href="{%url 'ehome'%}" id="nav">HOME</a>
           </li>
           <li>
-            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+            <a href="" id="mark">ABOUT US</a>
           </li>
           <li>
             <a href="{%url 'login'%}" id="nav">LOGOUT</a>
           </li>
           <li>
-            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+            <a href="{%url 'employee_contact'%}" id="nav">CONTACT</a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6" style="display: flex; justify-content: left">
-        <a href="{%url 'employeefile'%}"
-          ><button id="back">
-            <img src="{%static 'images\Back.png'%}" alt="" width="30px" />BACK
-          </button></a
-        >
+
+    <div class="detel">
+      <h1>
+        <span data-text="&nbsp;ABOUT US&nbsp;">&nbsp;ABOUT US&nbsp;</span>
+      </h1>
+    </div>
+    <div class="title">
+      <h2 id="aboutus-title">OPTIWORK Employee Management System</h2>
+    </div>
+    <p id="aboutus-desc">
+      Welcome to OPTIWORK, your trusted partner in revolutionizing how
+      businesses manage their most valuable asset their workforce. At OPTIWORK,
+      we've built an innovative employee management system app designed to
+      streamline your HR processes, enhance productivity, and elevate employee
+      satisfaction.
+    </p>
+
+    <div class="title">
+      <h2 id="aboutus-title">Our Vision</h2>
+    </div>
+
+    <p id="aboutus-desc">
+      At OptiWork, our vision is to empower organizations of all sizes to
+      optimize their human resources and achieve peak operational efficiency. We
+      believe that a well-managed workforce is the cornerstone of success, and
+      our app is tailored to help you achieve just that.
+    </p>
+    <div class="title">
+      <h2 id="aboutus-title">Our Story</h2>
+    </div>
+    <p id="aboutus-desc">
+      Founded by a team of HR and technology experts, OptiWork was born out of a
+      passion for simplifying employee management processes. We recognized the
+      challenges businesses face in managing their employees effectively, from
+      tracking attendance and leaves to performance evaluations and payroll
+      management. With this insight, we set out to create a solution that would
+      make these tasks not just easier but enjoyable.
+    </p>
+
+    <div class="title">
+      <h2 id="aboutus-title">What Sets Us Apart</h2>
+    </div>
+    <p id="aboutus-desc">
+      OptiWork stands out in the crowded HR software landscape for several
+      reasons:
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">User-Friendly Interface:</span>We've designed our
+      app with the end user in mind, ensuring that even those with minimal
+      technical expertise can navigate and use it effortlessly.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Customization:</span> We understand that every
+      organization is unique. That's why OptiWork offers a high degree of
+      customization, allowing you to tailor our solution to meet your specific
+      needs.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Data Security:</span> Your data's security is our
+      top priority. We employ robust security measures to ensure your sensitive
+      HR information remains confidential and protected.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Exceptional Support: </span> Our dedicated support
+      team is here to assist you every step of the way. From implementation to
+      ongoing usage, we're committed to helping you get the most out of
+      OptiWork.
+    </p>
+    <div class="title">
+      <h2 id="aboutus-title">Our Services</h2>
+    </div>
+    <p id="aboutus-desc">
+      OptiWork offers a comprehensive suite of HR and employee management
+      services, including:
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Attendance Tracking:</span> Say goodbye to manual attendance registers. OptiWork makes tracking attendance a breeze, reducing errors and ensuring accurate payroll processing.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Leave Management:</span> Simplify leave requests and approvals, and maintain better visibility over employee time-off.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Performance Evaluation:</span> Conduct objective performance evaluations, set goals, and track progress for individual employees and teams.
+    </p>
+    <p id="aboutus-desc">
+      <span id="desc-below">Payroll Processing:</span> Streamline your payroll process, automate calculations, and ensure timely and accurate salary disbursements.
+    </p>
+    <p id="aboutus-desc">
+        <span id="desc-below">Employee Engagement:</span> Foster a positive work environment by enhancing communication, recognition, and employee feedback.</p>
+      </p>
+      <div class="title">
+        <h2 id="aboutus-title">Join the OptiWork Revolution</h2>
       </div>
-    </div>
-
-    <h1 id="att-title">EMPLOYEE <span id="att-span">DATA</span></h1>
-
-    <!----------------------------------------------------------------------------------------------------------------------------------->
-    <div class="glass2">
-      <table>
-        <tr>
-          <th>E.No</th>
-          <th>Name</th>
-          <th>Gender</th>
-          <th>Destination</th>
-          <th>Date of Joining</th>
-          <th>Basic Salary</th>
-          <th>Sur name</th>
-          <th>Date of Birth</th>
-          <th>Care of's Phone Number</th>
-          <th>Adhaar Number</th>
-          <th>Address</th>
-          <th>Phone Number</th>
-        </tr>
-        <tr>
-          {% for i in search_data %}
-          <td><div class="glass2">{{i.Employee_Code}}</div></td>
-          <td><div class="glass2">{{i.Employee_Name}}</div></td>
-          <td><div class="glass2">{{i.Employee_Gender}}</div></td>
-          <td><div class="glass2">{{i.Employee_Role}}</div></td>
-          <td><div class="glass2">{{i.Employee_Doj}}</div></td>
-          <td><div class="glass2">{{i.Employee_Bsalary}}</div></td>
-          <td><div class="glass2">{{i.Employee_Fname}}</div></td>
-          <td><div class="glass2">{{i.Employee_Dob}}</div></td>
-          <td><div class="glass2">{{i.Employee_Fphone}}</div></td>
-          <td><div class="glass2">{{i.Employee_Adhaar}}</div></td>
-          <td><div class="glass2">{{i.Employee_Address}}</div></td>
-          <td><div class="glass2">{{i.Employee_Phone}}</div></td>
-        </tr>
-        {% endfor%}
-      </table>
-    </div>
-    <div
+      <p id="aboutus-desc">
+        We invite you to join the growing community of businesses that have already experienced the OptiWork advantage. Let us help you transform your HR processes, elevate your organization's efficiency, and create a happier, more productive workforce.
+      </p><p id="aboutus-desc">
+Thank you for considering OptiWork as your trusted partner in employee management. We look forward to helping you achieve your HR goals. If you have any questions or would like a personalized demo, please don't hesitate to reach out. Your success is our success.
+      </p>
+      <p style="text-align: left;margin-left: 15px;color:#7C73C0;font-weight: 700;font-size: 20px;margin-bottom: 5px;margin-top: 50px;">Sincerely,</p>
+      <p style="text-align: left;margin-left: 15px;color: #94ADD7;font-weight: 700;font-size: 20px;margin-top:0px;margin-bottom: 0;">YUVAN PRASATH B</p>
+      <p style="text-align: left;margin-left: 15px;color: #94ADD7;font-weight: 400;font-size: 20px;margin-top:0px;">Founder and CEO, OptiWork Employee Management System</p>
+      <div
       class="row"
       style="
         background-color: black;
@@ -112,26 +166,26 @@
           "
         >
           <li id="list1">
-            <a href="{%url 'home'%}" id="not_active">Home Page</a>
+            <a href="{%url 'ehome'%}" id="not_active">Home Page</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'aboutus'%}" id="not_active">About Us</a>
+            <a href="{%url 'employee_aboutus'%}" id="active">About Us</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'employeefile'%}" id="not_active">Employee File</a>
+            <a href="{%url 'employeemanage'%}" id="not_active">Employee File</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'salarystatement'%}" id="not_active"
+            <a href="{%url 'SalaryStatements'%}" id="not_active"
               >Salary Statement</a
             >
           </li>
           <li style="list-style: none">
-            <a href="{%url 'attendance'%}" id="not_active"
+            <a href="{%url 'eattendance'%}" id="not_active"
               >Attendance Management</a
             >
           </li>
           <li style="list-style: none">
-            <a href="{%url 'leave'%}" id="not_active">Leave Management</a>
+            <a href="{%url 'eleave'%}" id="not_active">Leave Management</a>
           </li>
         </ul>
       </div>

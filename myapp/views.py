@@ -6,6 +6,7 @@ from .forms import ModifyForm
 from datetime import datetime
 from django.http import HttpResponseRedirect
 from .models import leave
+from .forms import Loginform
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from .models import Salary_slip
@@ -108,19 +109,29 @@ def Employeefile(request):
 ###############################################             NEW EMPLOYEE                  ###############################################
 
 
-def new_employee(request):
-    submitted=False
-    if request.method=='POST':
-         form=EmployeeForm(request.POST)
-         if form.is_valid():
-              form.save()
 
-              return HttpResponseRedirect('/NewEmployee?submmitted=True')
-    else:
-         form=EmployeeForm
-         if 'submitted' in request.GET:
-              submitted=True
-    return render(request,"new_employee.html",{'form':form,'submitted':submitted})
+def new_employee(request):
+    submitted = False
+    form = EmployeeForm()  # Create instances of your forms
+    form1 = Loginform()
+
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST)
+        form1 = Loginform(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+        if form1.is_valid():
+            form1.save()
+
+        submitted = True
+        return render(request, "new_employee.html", {'form': form, 'form1': form1, 'submitted': submitted})
+
+    if 'submitted' in request.GET:
+        submitted = True
+
+    return render(request, "new_employee.html", {'form': form, 'form1': form1, 'submitted': submitted})
 
 
 ###############################################             LOGIN                       ###############################################
@@ -129,18 +140,27 @@ def new_employee(request):
 def login(request):
     if request.method == 'POST':
         user = request.POST.get('username')
-        password = request.POST.get('userpass')
-        request.session['password'] = password
+        pass1 = request.POST.get('userpass')
+        
+        
 
         # Check if a user with the provided username and password exists
-        user_exists = admins.objects.filter(username=user, password=password).exists()
+        user_exists = admins.objects.filter(username=user, password=pass1).exists()
+        print(user_exists)
 
-        if user_exists=="pumo" :
-            url = reverse('home')
-            return HttpResponseRedirect(url)
         if user_exists:
-             url = reverse('ehome')
-             return HttpResponseRedirect(url)
+            if user=="pumo":
+                url = reverse('home')
+                getcode=admins.objects.filter(username=user).first()
+                password=getcode.code
+                request.session['password'] = password
+                return HttpResponseRedirect(url)
+            else:
+                url = reverse('ehome')
+                getcode=admins.objects.filter(username=user).first()
+                password=getcode.code
+                request.session['password'] = password
+                return HttpResponseRedirect(url)
         else:
              return render(request,"login.html")
         
@@ -257,6 +277,11 @@ def manage(request):
 def contact(request):
      return render(request,"contact.html")
 
+#################################################    CHANGE PASSWORD     #################################################################
+def changepass(request,employee_code):
+     employee = get_object_or_404(admins, code=employee_code)
+     return render(request,"changepass.html")
+
 
 ##########################################################################################################################################
 #                                                     EMPLOYEE PORTAL                                                                      
@@ -285,9 +310,8 @@ def employeeattendance(request):
 
 
 def eattsearch(request):
-     if request.method=="POST":
-          code=request.POST['asearch']
-          employees=attendance.objects.filter(Employee_Code=code)
+     password = request.session.get('password')
+     employees=attendance.objects.filter(Employee_Code=password)
      return render(request,"employee_attsearch.html",{'employee':employees})
 
 def epayroll(request):
@@ -380,4 +404,24 @@ def employeemanage(request):
       
         
     return render(request, "employee_manage.html", {'search_data': search_details})
-    
+def employeeleave(request):
+     password = request.session.get('password')
+     if request.method=="POST":
+          
+          lsdate=request.POST['leavesdate']
+          ledate=request.POST['leaveedate']
+          ltype=request.POST['ltype']
+          lreason=request.POST['reason']
+          obj=leave(Employee_Code=password,Start_Date=lsdate,End_Date=ledate,Leave_Type=ltype,Reason=lreason)
+          obj.save()
+     return render(request,"employee_leavepage.html")
+def employeeleavesearch(request):
+    password = request.session.get('password')
+    employees=Employees.objects.filter(Employee_Code=password).first()
+    ename=employees.Employee_Name
+    employee=leave.objects.filter(Employee_Code=password)
+    return render(request,"employee_leavesearch.html",{'employee':employee,'ename':ename})
+def employeeaboutus(request):
+     return render(request,"employee_aboutus.html")
+def employeecontact(request):
+     return render(request,"employee_contact.html")

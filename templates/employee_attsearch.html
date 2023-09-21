@@ -28,14 +28,17 @@
       >
         <ul>
           <li>
-            <a href="{%url 'home'%}" id="nav">HOME</a>
+            <a href="{%url 'ehome'%}" id="nav">HOME</a>
           </li>
           <li>
-            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+            <a href="{%url 'employee_aboutus'%}" id="nav">ABOUT US</a>
+          </li>
+          <li>
+            <a href="{%url 'login'%}" id="nav">LOGOUT</a>
           </li>
 
           <li>
-            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+            <a href="{%url 'employee_contact'%}" id="nav">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -111,26 +114,26 @@
           "
         >
           <li id="list1">
-            <a href="{%url 'home'%}" id="not_active">Home Page</a>
+            <a href="{%url 'ehome'%}" id="not_active">Home Page</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'aboutus'%}" id="not_active">About Us</a>
+            <a href="{%url 'employee_aboutus'%}" id="not_active">About Us</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'employeefile'%}" id="not_active">Employee File</a>
+            <a href="{%url 'employeemanage'%}" id="not_active">Employee File</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'salarystatement'%}" id="not_active"
+            <a href="{%url 'SalaryStatements'%}" id="not_active"
               >Salary Statement</a
             >
           </li>
           <li style="list-style: none">
-            <a href="{%url 'attendance'%}" id="not_active"
+            <a href="{%url 'eattendance'%}" id="not_active"
               >Attendance Management</a
             >
           </li>
           <li style="list-style: none">
-            <a href="{%url 'leave'%}" id="not_active">Leave Management</a>
+            <a href="{%url 'eleave'%}" id="not_active">Leave Management</a>
           </li>
         </ul>
       </div>

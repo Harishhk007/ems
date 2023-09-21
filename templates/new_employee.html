@@ -33,7 +33,9 @@
           <li>
             <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
           </li>
-          
+          <li>
+            <a href="{%url 'login'%}" id="nav">LOGOUT</a>
+          </li>
           <li>
             <a href="{%url 'contact'%}" id="nav">CONTACT</a>
           </li>
@@ -60,9 +62,11 @@
 
 
 <div class="glass2">
-    <form method="post">
+    <form action="{%url 'employeefile'%}" method="post">
       {% csrf_token %}
       {{ form.as_p }}
+
+      {{form1.as_p}}
       <div style="display: flex;justify-content: center;">
       <div class="glass2" style="width: 100px;">
       <button type="submit" style="font-family: 'poppins';color: white;background-color: transparent;border: 0;">Save</button></div></div>

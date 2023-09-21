@@ -31,11 +31,14 @@
             <a href="{%url 'ehome'%}" id="nav">HOME</a>
           </li>
           <li>
-            <a href="{%url 'aboutus'%}" id="nav">ABOUT US</a>
+            <a href="{%url 'employee_aboutus'%}" id="nav">ABOUT US</a>
+          </li>
+          <li>
+            <a href="{%url 'login'%}" id="nav">LOGOUT</a>
           </li>
 
           <li>
-            <a href="{%url 'contact'%}" id="nav">CONTACT</a>
+            <a href="{%url 'employee_contact'%}" id="nav">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -48,26 +51,8 @@
           </button></a
         >
       </div>
-      <div class="col-lg-6" style="display: flex; justify-content: right">
-        <form action="{%url 'eattsearch'%}" method="POST" style="display: flex">
-          {% csrf_token %}
-          <div class="glass3" style="margin-right: 30px">
-            <input
-              type="text"
-              name="asearch"
-              placeholder="Search"
-              id="asearch"
-            /><img
-              src="{%static 'images\Search.png'%}"
-              alt=""
-              style="float: right; margin-left: 10px"
-              width="30px"
-            />
-          </div>
-          <div class="glass3" style="width: 110px">
-            <input type="submit" style="cursor: pointer" />
-          </div>
-        </form>
+      <div class="col-lg-6" style="display: flex;justify-content:right;">
+        <div class="glass3" style="vertical-align: middle;padding: 5px 10px;margin-right: 40px;"><a href="{% url 'eattsearch'%}"><button style="background-color: transparent;cursor: pointer;;border: 0;text-align: center;color: white;font-family: 'poppins';font-size: 20px;">Records</button></a></div></div>
       </div>
     </div>
 
@@ -173,16 +158,16 @@
           "
         >
           <li id="list1">
-            <a href="{#}" id="not_active">Home Page</a>
+            <a href="{%url 'ehome'%}" id="not_active">Home Page</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'aboutus'%}" id="not_active">About Us</a>
+            <a href="{%url 'employee_aboutus'%}" id="not_active">About Us</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'employeefile'%}" id="not_active">Employee File</a>
+            <a href="{%url 'employeemanage'%}" id="not_active">Employee File</a>
           </li>
           <li style="list-style: none">
-            <a href="{%url 'salarystatement'%}" id="not_active"
+            <a href="{%url 'SalaryStatements'%}" id="not_active"
               >Salary Statement</a
             >
           </li>
@@ -192,7 +177,7 @@
             >
           </li>
           <li style="list-style: none">
-            <a href="{%url 'leave'%}" id="not_active">Leave Management</a>
+            <a href="{%url 'eleave'%}" id="not_active">Leave Management</a>
           </li>
         </ul>
       </div>
