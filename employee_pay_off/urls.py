@@ -36,5 +36,5 @@ urlpatterns = [
     path('employeeleaverecords/',views.employeeleavesearch,name="eleavesearch"),
     path('Aboutus/',views.employeeaboutus,name="employee_aboutus"),
     path('Contact/',views.employeecontact,name="employee_contact"),
-    path('Changepass/<int:employee_code>/',views.changepass,name="changepass")
+    path('Changepass/',views.changepass,name="changepass")
 ]

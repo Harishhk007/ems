@@ -44,7 +44,7 @@
     </div>
     <div class="row">
       <div class="col-lg-6" style="display: flex; justify-content: left">
-        <a href="{%url 'home'%}"
+        <a href="{%url 'employeemanage'%}"
           ><button id="back">
             <img src="{%static 'images\Back.png'%}" alt="" width="30px" />BACK
           </button></a
@@ -53,31 +53,92 @@
     </div>
 
     <h1 id="leave-title">Change <span id="leave-span"> Password</span></h1>
-    <div class="row">
-      <div class="col-lg-6">
-        <h1
-          style="
-            font-family: 'poppins';
-            font-weight: 800;
-            text-align: center;
-            color: white;
-          "
-        >
-          OLD PASSWORD
-        </h1>
+    <form action="" method="POST">
+      {%csrf_token%}
+      <div class="row">
+        <div class="col-lg-6">
+          <h1
+            style="
+              font-family: 'poppins';
+              font-weight: 800;
+              text-align: center;
+              color: white;
+            "
+          >
+            OLD PASSWORD
+          </h1>
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div class="glass3" style="width: 70%">
+              <input
+                type="text"
+                name="oldpass"
+                id="oldpass"
+                style="
+                  border: 0;
+                  background-color: transparent;
+                  color: white;
+                  width: 70%;
+                  border-radius: 20px;
+                  outline: 0;
+                  font-family: 'poppins';
+                  font-size: 30px;
+                "
+                placeholder="Enter Old Password"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h1
+            style="
+              font-family: 'poppins';
+              font-weight: 800;
+              text-align: center;
+              color: white;
+            "
+          >
+            NEW PASSWORD
+          </h1>
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div class="glass3" style="width: 70%">
+              <input
+                type="text"
+                name="newpass"
+                id="newpass"
+                style="
+                  border: 0;
+                  background-color: transparent;
+                  color: white;
+                  width: 70%;
+                  outline: 0;
+                  font-family: 'poppins';
+                  font-size: 30px;
+                "
+                placeholder="Enter New Password"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <h1
-          style="
-            font-family: 'poppins';
-            font-weight: 800;
-            text-align: center;
-            color: white;
-          "
-        >
-          NEW PASSWORD
-        </h1>
+      <div style="display: flex; justify-content: center; align-items: center">
+        <div class="glass3" style="padding: 5px 10px; border-radius: 20px">
+          <input
+            type="submit"
+            value="Submit"
+            style="
+              font-family: 'poppins';
+              font-size: 20px;
+              color: white;
+              cursor: pointer;
+              background-color: transparent;
+            "
+          />
+        </div>
       </div>
-    </div>
+    </form>
   </body>
 </html>

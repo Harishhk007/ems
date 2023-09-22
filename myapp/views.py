@@ -278,9 +278,7 @@ def contact(request):
      return render(request,"contact.html")
 
 #################################################    CHANGE PASSWORD     #################################################################
-def changepass(request,employee_code):
-     employee = get_object_or_404(admins, code=employee_code)
-     return render(request,"changepass.html")
+
 
 
 ##########################################################################################################################################
@@ -425,3 +423,11 @@ def employeeaboutus(request):
      return render(request,"employee_aboutus.html")
 def employeecontact(request):
      return render(request,"employee_contact.html")
+def changepass(request):
+     password = request.session.get('password')
+     if request.method=="POST":
+          oldpass=request.POST['oldpass']
+          newpass=request.POST['newpass']
+          admins.objects.filter(code=password,password=oldpass).update(password=newpass)
+     
+     return render(request,"changepass.html")

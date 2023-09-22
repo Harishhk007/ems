@@ -71,7 +71,7 @@
           <th>Adhaar Number</th>
           <th>Address</th>
           <th>Phone Number</th>
-          <th>Modify</th>
+          <th>Change Password</th>
         </tr>
         <tr>
           {% for i in search_data %}
@@ -88,20 +88,21 @@
           <td><div class="glass2">{{i.Employee_Address}}</div></td>
           <td><div class="glass2">{{i.Employee_Phone}}</div></td>
           <td>
-            <a href="{%url 'changepass' i.Employee_Code%}"
+            <a href="{%url 'changepass'%}"
               ><button
                 style="
                   border: 0;
                   background-color: lightgreen;
-                  color: black;
+                  color: white;
                   font-family: 'poppins';
-                  font-size: 15px;
+                  font-size: 20px;
+                  cursor: pointer;
                   border-radius: 20px;
                   text-align: center;
                   padding: 2px 5px;
                 "
               >
-                Change Pass
+                Change
               </button></a
             >
           </td>
