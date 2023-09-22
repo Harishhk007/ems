@@ -6,7 +6,7 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('newEmployee/',views.new_employee,name="newemployee"),
-    path('login/',views.login,name="login"),
+    path('',views.login,name="login"),
     path('employeefiles/',views.Employeefile,name="employeefile"),
     path('salaryslip/',views.salary_slip,name="MonthlyPayFile"),
     path('modify/<int:employee_code>/', views.modify, name='modify'),
